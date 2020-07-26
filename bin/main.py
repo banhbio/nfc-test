@@ -4,6 +4,7 @@ import nfc
 import binascii
 import logging
 import os
+import time
 
 class CardReader(object):
     def on_connect(self, tag):
@@ -16,8 +17,12 @@ class CardReader(object):
         finally:
             clf.close()
 
-if __name__ == '__main__':
+def main():
     card_reader = CardReader()
 
     while True:
         card_reader.read_id()
+        time.sleep(3)
+
+if __name__ == '__main__':
+    main()
