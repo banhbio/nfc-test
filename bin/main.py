@@ -6,7 +6,7 @@ import logging
 import os
 
 class CardReader(object):
-    def on_connect(self, tag)
+    def on_connect(self, tag):
         self.idm = binascii.hexlify(tag._nfcid)
     
     def read_id(self):
